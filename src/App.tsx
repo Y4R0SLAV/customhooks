@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { Hover } from './components/Hover'
 import { useInput } from './hooks/useInput'
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
       <input {...password} placeholder="Password"/>
 
       <button onClick={() => console.log(username.value + " " + password.value)}> Click </button>
+
+      <Hover />
     </div>
   )
 }
