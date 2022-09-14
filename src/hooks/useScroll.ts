@@ -26,5 +26,5 @@ export const useScroll = (parentRef: React.RefObject<Element>,
       observer.current?.unobserve(node)
     }
 
-  }, [callback])
+  }, [parentRef, childRef, callback])
 }

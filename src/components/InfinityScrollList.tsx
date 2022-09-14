@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
-import { useScroll } from './../hooks/useScroll';
+import { useScroll } from '../hooks/useScroll';
 
 interface ITodo {
   title: string
@@ -14,7 +14,7 @@ export const List = () => {
   const parentRef = useRef<HTMLDivElement>(null)
   const childRef = useRef<HTMLDivElement>(null)
 
-  const scroll = useScroll(parentRef, childRef, () => fetchTodos(page, limit))
+  useScroll(parentRef, childRef, () => fetchTodos(page, limit))
 
   async function fetchTodos(page: number, limit: number) {
     try {
